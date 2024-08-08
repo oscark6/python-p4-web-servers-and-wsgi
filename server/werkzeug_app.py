@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# server/werkzeug_app.py
 
 from werkzeug.wrappers import Request, Response
 
@@ -6,10 +6,6 @@ from werkzeug.wrappers import Request, Response
 def application(request):
     print(f'This web server is running at {request.remote_addr}')
     return Response('A WSGI generated this response!')
-
-
-def test():
-    pass
 
 if __name__ == '__main__':
     from werkzeug.serving import run_simple
